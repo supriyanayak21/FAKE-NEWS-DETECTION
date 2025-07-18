@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./static/index.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Fake News</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightblue;">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LieCatcher</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Check</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        Here Now Check Your News.
+      </span>
+    </div>
+  </div>
+</nav>
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar" style="background-color: rgb(85, 144, 164);">
+  <div class="container-fluid">
+     <button class="navbar-toggler d-flex align-items-center gap-2" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" 
+      aria-expanded="false" aria-label="Toggle navigation"
+      style="background-color:lightblue; border-color:white;">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+  </div>
+</nav>
+<div class="container col-xxl-8 px-4 py-5"> 
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+         <div class="col-10 col-sm-8 col-lg-6"> 
+            <img src="./static/news.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> 
+        </div> 
+        <div class="col-lg-6">
+             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1> 
+             <p class="lead">In today's fast-paced digital world, misinformation spreads faster than ever. With just one click, our Fake News Detector empowers you to verify what you read online. From students and researchers to journalists and everyday readers, this tool is designed to promote media literacy and support responsible content consumption.</p> 
+             <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
+               
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" style="background-color: rgb(85, 144, 164);" fdprocessedid="bcpbzq" onclick="window.location.href='/predict'";>Predict</button> 
+                
+            </div> 
+        </div>
+     </div>
+     </div>
+     <!-- INFO SECTION: How It Works + Features -->
+<section class="info-section">
+  <div class="container">
+    <h2>How Our Fake News Detection System Works</h2>
+    <p>
+      Our AI-powered system uses advanced Natural Language Processing (NLP) and machine learning techniques to analyze news content. It compares linguistic patterns, source credibility, and factual accuracy to determine whether a piece of news is likely to be real or fake.
+    </p>
+
+    <div class="features">
+      <div class="feature-card">
+        <h3>🧠 AI-Based Analysis</h3>
+        <p>Detects fake news using trained machine learning models with high accuracy.</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚡ Instant Results</h3>
+        <p>Paste a news article or headline and get real-time predictions within seconds.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔒 Secure & Private</h3>
+        <p>We do not store or share your submitted data. Your privacy is our priority.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📊 Transparent</h3>
+        <p>Confidence scores and model accuracy are visible so you can trust the results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FEEDBACK SECTION -->
+<section class="feedback-section">
+  <div class="container">
+    <h2>Help Us Improve</h2>
+    <p>If you think the prediction was incorrect, please report it below. Your feedback helps us enhance our model.</p>
+
+    <form action="/submit-feedback" method="POST" class="feedback-form">
+      <label for="news-text">Pasted News Text:</label>
+      <textarea id="news-text" name="news_text" rows="5" required placeholder="Paste the news content here..."></textarea>
+
+      <label for="actual-label">What do you think this news really is?</label>
+      <select id="actual-label" name="actual_label" required>
+        <option value="">-- Select --</option>
+        <option value="Real">Real</option>
+        <option value="Fake">Fake</option>
+      </select>
+
+      <label for="comments">Additional Comments (optional):</label>
+      <textarea id="comments" name="comments" rows="3" placeholder="Explain why you think the prediction was wrong..."></textarea>
+
+      <button type="submit" class="report-button">Report Misclassification</button>
+    </form>
+  </div>
+</section>
+<!-- FOOTER SECTION -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-about">
+      <h3>About Us</h3>
+      <p>
+        We are dedicated to fighting misinformation by providing an AI-based solution to detect fake news quickly and accurately.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="mailto:contact@fakenewsdetection.com">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fake News Prediction System. All rights reserved.</p>
+  </div>
+</footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
